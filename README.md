@@ -3,7 +3,7 @@
 ## Introduction
 The challenge is to create a phone catalogue app from scratch
 
-![alt](https://c.tenor.com/7FvMpzjFTyAAAAAC/smartphone-cat.gif "Your new moobile phone")
+![alt](https://c.tenor.com/7FvMpzjFTyAAAAAC/smartphone-cat.gif "Your new mobile phone")
 
 It contains 2 mandatory parts:
 - A backend folder with necessary code to run a server. "npm run dev" on folder starts a nodemon instance. DB is hosted on MongoDB Atlas, so starting a local database is not required.
@@ -11,6 +11,7 @@ It contains 2 mandatory parts:
 
 ## Planning
 - Project mandatory requirements were provided by DCSL GuideSmiths staff.
+- There's a Trello board that I've used to track my work: https://trello.com/b/VGBqOeOK/dcsl-mobile
 
 ## Functional description
 #### Mandatory:
