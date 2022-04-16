@@ -10,15 +10,15 @@ const phoneSchema = new Schema({
   manufacturer: {
     type: String,
     required: true,
-    maxlength: 50,
+    maxlength: 30,
   },
   description: {
     type: String,
-    maxlength: 500,
+    maxlength: 250,
   },
   color: {
     type: String,
-    maxlength: 20,
+    maxlength: 30,
   },
   price: {
     type: Number,
@@ -26,6 +26,7 @@ const phoneSchema = new Schema({
   },
   imageFilePath: {
     type: String,
+    required: true,
   },
   screen: {
     type: String,
