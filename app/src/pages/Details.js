@@ -45,9 +45,6 @@ function Details() {
     }, 3000);
 
   const handleDelete = async () => {
-    /*Delete Logic*/
-    console.log("On delete");
-
     try {
       const response = await fetch(`http://localhost:8080/phones/${id}`, {
         method: "delete",
@@ -71,34 +68,46 @@ function Details() {
   };
 
   return (
-    <div className="flex max-w-4xl justify-center mb-auto">
+    <div className="flex max-w-4xl justify-center mb-auto mx-auto">
       {!isLoaded ? (
         <SpinnerComponent />
       ) : error ? (
         <ErrorComponent error={error} />
       ) : success ? (
         <SuccessComponent
-          message={`Phone with id ${!id} successfully deleted!`}
+          message={`Phone with id ${id} successfully deleted!`}
         />
       ) : (
-        <div>
-          <h1>{phone.name}</h1>
-          <h3>{phone.manufacturer}</h3>
-          <img src={phone.imageFilePath} alt=""></img>
-          <p>Price: {phone.price} €</p>
-          <p>{phone.description}</p>
-          <p>Screen Size: {phone.screen}</p>
-          <p>Color: {phone.color}</p>
-          <p>Storage: {phone.storage} GB</p>
-          <p>RAM: {phone.ram}</p>
-          <Link to={`/edit/${phone._id}`}>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white text-sm m-2 px-4 py-2 border rounded-xl hover:border-blue-300 active:transform active:translate-y-1 active:bg-blue-300">
-              Edit
-            </button>
-          </Link>
-          <button className="bg-red-600 hover:bg-red-700 text-white text-sm m-2 px-4 py-2 border rounded-full"
-            onClick={handleDelete}
-          >Delete</button>
+        <div className="m-4 sm:w-3/4 sm:min-w-[640px]">
+          <div className="flex sm:flex-row flex-col p-4">
+            <div className="sm:w-1/2 mx-auto">
+              <img className="w-52 mx-auto" src={phone.imageFilePath} alt=""></img>
+            </div>
+            <div className="mt-4 pb-4 sm:mt-0 sm:w-1/2 sm:mx-auto border-b">
+              <h1 className="font-semibold text-slate-800 text-2xl">{phone.name}</h1>
+              <h3>{phone.manufacturer}</h3>
+              <p className="font-semibold text-slate-800 text-lg">{phone.price} €</p>
+
+              <hr className="my-2"></hr>
+
+              <h5 className="font-semibold">Product Details:</h5>
+              {phone.description ?
+                  <p>{phone.description}</p> :
+                  <p className="italic">-- Sorry, this phone has no description available at this moment. --</p>}
+              <p>Screen Size: {phone.screen ? <span>{phone.screen}</span> : <span className="italic">N/D</span>}</p>
+              <p>Color: {phone.color ? <span>{phone.color}</span> : <span className="italic">N/D</span>}</p>
+              <p>Storage: {phone.storage} GB</p>
+              <p>RAM: {phone.ram} GB</p>
+            </div>
+          </div>
+          <div className="flex flex-row justify-center sm:justify-end sm:pr-12">
+            <Link to={`/edit/${phone._id}`} className="bg-white hover:bg-primary-700 text-primary-500 hover:text-white text-sm mx-2 px-4 py-2 border rounded-full hover:border-primary-300 active:transform active:translate-y-1 active:bg-primary-300 transition">
+                Edit
+            </Link>
+            <button className="bg-primary-500 hover:bg-primary-700 text-white text-sm mx-2 px-4 py-2 border rounded-full hover:border-primary-300 active:transform active:translate-y-1 active:bg-primary-300"
+                onClick={handleDelete}
+            >Delete</button>
+          </div>
         </div>
       )}
     </div>

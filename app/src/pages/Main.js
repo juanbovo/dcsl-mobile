@@ -35,14 +35,18 @@ function Main() {
   }, [isCalling, fetchData]);
 
   return (
-    <div className="flex flex-wrap max-w-4xl justify-start mb-auto">
-      {!isLoaded ? (
-        <SpinnerComponent />
-      ) : error ? (
-        <ErrorComponent error={error} />
-      ) : (
-        phones.map((phone) => <PhoneComponent key={phone._id} phone={phone} />)
-      )}
+    <div className="mb-auto mx-auto pt-4">
+      <div className="flex flex-wrap justify-center max-w-4xl px-4">
+        {!isLoaded ? (
+          <SpinnerComponent />
+        ) : error ? (
+          <ErrorComponent error={error} />
+        ) : (
+          phones.map((phone) => (
+            <PhoneComponent key={phone._id} phone={phone} />
+          ))
+        )}
+      </div>
     </div>
   );
 }
