@@ -6,8 +6,8 @@ The challenge is to create a phone catalogue app from scratch
 ![alt](https://c.tenor.com/7FvMpzjFTyAAAAAC/smartphone-cat.gif "Your new mobile phone")
 
 It contains 2 mandatory parts:
-- A backend folder with necessary code to run a server. "npm run dev" on folder starts a nodemon instance. DB is hosted on MongoDB Atlas, so starting a local database is not required.
-- A frontend folder with a React project.
+- A backend folder with necessary code to run a server. "npm run dev" on folder starts a nodemon instance on port 8080. DB is hosted on MongoDB Atlas, so starting a local database is not required.
+- A frontend folder with a React project. "npm start" to launch it on port 3000.
 
 ## Planning
 - Project mandatory requirements were provided by DCSL GuideSmiths staff.
@@ -29,18 +29,22 @@ It contains 2 mandatory parts:
     * It should have a README.md describing the product and explaining how to run both the REST API and the REACT APP.
 
 #### Nice to have
-    - (TBD)
-
-## Use cases
-- (TBD)
+- Implemented CRUD capabilities.
+    * Phone creation.
+    * Phone deletion.
+    * Phone update.
+- Persistance layer: MongoDB Atlas.
+- Dockerize project.
+    * https://hub.docker.com/repository/docker/juanbovo/dcsl-api
+    * https://hub.docker.com/repository/docker/juanbovo/dcsl-app
+    * You can find a docker-compose.yml file in this repo too.
 
 ## Technologies
 Node.js, Express.js, MongoDB (via Mongoose) for backend, and React and Tailwind for frontend. Some npm packages were also used for development.
 
 ## Postman Collection
-- (TBD)
+- https://www.getpostman.com/collections/5fe0f1702a13fd5a75c0
 
 ## To-do
-- Implement testing: TDD wasn't performed due personal time constraints.
-- Implement CRUD capabilities.
-- Dockerize project.
+- Implement testing: not performed due personal time constraints.
+- State management.
