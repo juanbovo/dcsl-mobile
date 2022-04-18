@@ -9,7 +9,7 @@ const routes = require("./routes");
 const { mongoose } = require("./database");
 
 // Settings
-app.set("port", process.env.PORT || 3000);
+app.set("port", process.env.PORT || 8080);
 
 // Middleware
 app.use(express.json());

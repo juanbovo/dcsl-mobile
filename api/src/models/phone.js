@@ -30,12 +30,14 @@ const phoneSchema = new Schema({
   },
   screen: {
     type: String,
-    maxlength: 50,
+    maxlength: 20,
   },
   storage: {
+    required: true,
     type: Number,
   },
   ram: {
+    required: true,
     type: Number,
   },
 });
