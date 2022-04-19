@@ -5,7 +5,9 @@ function PhoneComponent({ phone }) {
     <div className="w-44 m-4 shadow-lg">
       <div className="bg-white rounded-lg mb-10">
         <Link to={`/phones/${phone._id}`} >
-          <img src={phone.imageFilePath} alt="" className="w-full"/>
+          <div className="flex h-56">
+            <img src={phone.imageFilePath} alt="" className="my-auto w-full"/>
+          </div>
         </Link>
         <div className="py-4 px-2 text-center">
           <Link to={`/phones/${phone._id}`} >

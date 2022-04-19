@@ -3,15 +3,17 @@
 ## Introduction
 The challenge is to create a phone catalogue app from scratch
 
-![alt](https://c.tenor.com/7FvMpzjFTyAAAAAC/smartphone-cat.gif "Your new mobile phone")
+![alt](https://c.tenor.com/GdDXAn_CjW0AAAAC/i-phone-cat-playing-with-iphone.gif "Your new mobile phone")
 
 It contains 2 mandatory parts:
-- A backend folder with necessary code to run a server. "npm run dev" on folder starts a nodemon instance on port 8080. DB is hosted on MongoDB Atlas, so starting a local database is not required.
-- A frontend folder with a React project. "npm start" to launch it on port 3000.
+- A backend folder with necessary code to run a server. "**yarn dev**" on folder starts a nodemon instance on port 8080. DB is hosted on MongoDB Atlas, so starting a local database is not required.
+- A frontend folder with a React project. "**yarn start**" to launch it on port 3000.
 
 ## Planning
 - Project mandatory requirements were provided by DCSL GuideSmiths staff.
 - There's a Trello board that I've used to track my work: https://trello.com/b/VGBqOeOK/dcsl-mobile
+- Please note that I'm using images retrieved using phones-specs-api: https://github.com/azharimm/phone-specs-api (I mean I'm not sure how this little project is going to handle different kind of images).
+    - You can try its search EP, it's quite good: https://api-mobilespecs.azharimm.site/v2/search?query= *your phone*
 
 ## Functional description
 #### Mandatory:
